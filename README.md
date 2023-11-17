@@ -9,7 +9,7 @@ API utilizada: [https://makeup-api.herokuapp.com/](https://makeup-api.herokuapp.
 
 
 # WIREFRAME DEL SITIO
-![Imagen Increíble](ruta/a/la/imagen.jpg)
+![Wireframe MAkeup API](https://raw.githubusercontent.com/valeriaramirezm/BOOT-M2-SEM12-PROY3/main/assets/img/wireframe-makeup-api.jpg)
 
 
 # PREVIEW DEL SITIO
