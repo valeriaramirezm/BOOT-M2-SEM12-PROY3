@@ -13,3 +13,4 @@ API utilizada: [https://makeup-api.herokuapp.com/](https://makeup-api.herokuapp.
 
 
 # PREVIEW DEL SITIO
+https://valeriaramirezm.github.io/BOOT-M2-SEM12-PROY3/
