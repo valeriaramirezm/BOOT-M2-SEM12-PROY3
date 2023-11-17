@@ -1,0 +1,161 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    background-color: #000000;
+}
+
+
+/* BOTON GENERICO*/
+.button-generico {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-generico:hover {
+    background-color: #36BBD9;
+}
+
+
+/*MAIN*/
+.main {
+    background-color: rgb(255, 255, 255);
+}
+
+.main:hover {
+   background-color: #36BBD9;
+}
+
+
+
+@media (min-width: 768px) {
+    .tienda {
+        display: flex;
+        gap: 1em;
+    }
+}
+
+/*JUMBOTRON*/
+.jumbotron {
+    background-image: url('../assets/img/Portada.png');
+    background-size: cover;
+    padding: 100px;
+    height: 600px;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: white;
+    width: 60%;
+}
+
+.jumbotron p {
+    font-size: 23px;
+    margin-bottom: 30px;
+    text-align: left;
+    color: white;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+
+    /* Estilos para iPads */
+    .jumbotron {
+        padding: 10px;
+        height: auto;
+    }
+
+    .jumbotron h1,
+    .jumbotron p {
+        width: 60%;
+    }
+
+    .jumbotron h1 {
+        font-size: 35px;
+    }
+
+    .jumbotron p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Estilos para dispositivos móviles */
+    .jumbotron {
+        padding: 30px
+    }
+
+    .jumbotron h1,
+    .jumbotron p {
+        width: 100%;
+    }
+
+    .jumbotron h1 {
+        font-size: 25px;
+    }
+
+    .jumbotron p {
+        font-size: 15px;
+        width: 60%;
+    }
+}
+
+/*BUSCADOR*/
+.buscador {
+    background-color: #b4055f;
+    background-size: contain;
+    color: white;
+    padding: 4em;
+    height: 100%;
+    /* Esto establecerá la altura al 100% del viewport height */
+}
+
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+}
+
+.footer-item {
+    padding: 2em;
+}
+
+.derechos {
+    background-color: #b4055f;
+    color: aliceblue;
+    font-size: 1em;
+    text-align: center;
+    padding: 1em;
+}

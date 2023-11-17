@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO 3: Tablero de Datos ("Dashboard")</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@1,300;1,400&family=Raleway:wght@200;300;400;500&family=Roboto:wght@300;500&family=Victor+Mono:wght@200;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"><img src="assets/img/logo.png" alt="logo" width="160px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white main" href="#">Inicio MakeUp API </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white main" href="#">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white main" href="#">Tiendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white main" href="#">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-text-color text-white main" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <section class="jumbotron vh-5">
+        <div>
+            <h1>Descubre la fuente definitiva de información para tus productos de belleza favoritos</h1>
+            <p>Desde lanzamientos exclusivos hasta rankings actualizados, nuestro comparador te ofrece todo lo que
+                necesitas para tomar decisiones informadas.</p>
+
+        </div>
+    </section>
+
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <section class="buscador">
+
+                    <div class="mt-4">
+                        <label for="categorySelect" class="form-label">Marca</label>
+                        <select class="form-select" id="brandSelect">
+                            <option selected>Selecciona</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="categorySelect" class="form-label">Tipo de producto</label>
+                        <select class="form-select" id="categorySelect">
+                            <option selected>Selecciona</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="button-generico" id="showGraphic">Buscar</button>
+                    </div>
+
+                </section>
+            </div>
+
+
+            <div class="col-md-9 mb-5">
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-item">
+                <img src="assets/img/logo.png" alt="logo" width="260px">
+                <p>Sumérgete en un mundo de colores vibrantes, texturas irresistibles y tendencias de maquillaje de
+                    última generación. </p>
+            </div>
+            <div class="footer-item">
+                <h5>Contacto</h5>
+                <p>Email: contacto@makeupapi.com</p>
+                <p>Teléfono: +123456789</p>
+                <p>Dirección: Avenida siempre viva 742 Springfield</p>
+            </div>
+
+            <div class="footer-item">
+                <h5>Somos UDDBootcamp</h5>
+                <img src="assets/img/acreditacion.svg" width="50%">
+            </div>
+        </div>
+
+        <div class="derechos">
+            <p>© 2023. Todos los derechos reservados. Esta es una página de aterrizaje ficticia para fines académicos.
+            </p>
+        </div>
+    </footer>
+
+
+    <div class="modal" id="spinnerModal" tabindex="-1" role="dialog" aria-labelledby="spinnerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <!-- Spinner -->
+                    <div class="spinner-border text-info" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
